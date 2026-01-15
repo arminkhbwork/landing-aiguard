@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    ports:
+      - "${HOST_PORT:-3000}:${PORT:-3000}"
+    environment:
+      PORT: "${PORT:-3000}"
+      NEXT_PUBLIC_ALLOW_INDEXING: "0"
+      NEXT_PUBLIC_SITE_URL: "http://localhost:${HOST_PORT:-3000}"
+      NEXT_PUBLIC_GITHUB_REPO_URL: "https://github.com/your-handle/landing-02-aiguard"

@@ -1,0 +1,25 @@
+import { Container } from "@/components/ui/container";
+import { LinkButton } from "@/components/ui/button";
+
+export default function NotFound() {
+  return (
+    <Container className="py-16 sm:py-20">
+      <div className="mx-auto max-w-xl text-center">
+        <p className="text-xs font-semibold tracking-widest text-cyan-600 dark:text-cyan-300">
+          404
+        </p>
+        <h1 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-zinc-950 dark:text-white sm:text-4xl">
+          This page doesn’t exist.
+        </h1>
+        <p className="mt-4 text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-300">
+          If you followed an outdated link, head back to the homepage.
+        </p>
+        <div className="mt-8 flex justify-center">
+          <LinkButton href="/" variant="secondary">
+            Back home
+          </LinkButton>
+        </div>
+      </div>
+    </Container>
+  );
+}
