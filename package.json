@@ -1,7 +1,28 @@
 {
-  "name": "landing-02-aiguard",
+  "name": "landing-aiguard",
   "version": "0.1.0",
+  "description": "SEO-first startup landing page for AI governance / EU AI Act compliance product",
   "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arminkhbwork/landing-aiguard.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "landing-page",
+    "seo",
+    "startup",
+    "ai-governance",
+    "gsap"
+  ],
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
