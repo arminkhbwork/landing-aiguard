@@ -59,7 +59,7 @@ export function MobileMenu() {
         .to(
           menu.querySelectorAll("a, button"),
           { opacity: 1, y: 0, duration: 0.35, stagger: 0.06 },
-          "-=0.2",
+          "-=0.2"
         );
     } else {
       // Animate out
@@ -107,7 +107,7 @@ export function MobileMenu() {
           <button
             type="button"
             onClick={closeMenu}
-            className="relative z-[10000] flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition-all hover:bg-white/10 hover:border-white/20"
+            className="relative z-[10000] flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition-all hover:border-white/20 hover:bg-white/10"
             aria-label="Close menu"
           >
             <svg
@@ -139,7 +139,7 @@ export function MobileMenu() {
               className="group relative rounded-xl border border-white/5 bg-white/5 px-6 py-4 text-lg font-semibold text-white transition-all hover:border-cyan-500/30 hover:bg-gradient-to-r hover:from-cyan-500/10 hover:to-emerald-500/10 hover:shadow-lg hover:shadow-cyan-500/10"
             >
               <span className="relative z-10">{item.label}</span>
-              <span className="absolute right-6 top-1/2 -translate-y-1/2 text-cyan-400 opacity-0 transition-opacity group-hover:opacity-100">
+              <span className="absolute top-1/2 right-6 -translate-y-1/2 text-cyan-400 opacity-0 transition-opacity group-hover:opacity-100">
                 →
               </span>
             </Link>
@@ -154,7 +154,7 @@ export function MobileMenu() {
             rel="noopener noreferrer"
             variant="secondary"
             size="md"
-            className="w-full justify-center border-white/20 bg-white/10 text-white backdrop-blur hover:bg-white/20 hover:border-white/30"
+            className="w-full justify-center border-white/20 bg-white/10 text-white backdrop-blur hover:border-white/30 hover:bg-white/20"
             onClick={closeMenu}
           >
             GitHub
@@ -178,26 +178,26 @@ export function MobileMenu() {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="relative flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg transition-colors hover:bg-zinc-100 dark:hover:bg-white/10 md:hidden"
+        className="relative flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg transition-colors hover:bg-zinc-100 md:hidden dark:hover:bg-white/10"
         aria-label="Toggle menu"
         aria-expanded={isOpen}
       >
         <span
           className={cn(
             "h-0.5 w-6 origin-center rounded-full bg-zinc-900 transition-all duration-300 dark:bg-white",
-            isOpen && "translate-y-2 rotate-45",
+            isOpen && "translate-y-2 rotate-45"
           )}
         />
         <span
           className={cn(
             "h-0.5 w-6 rounded-full bg-zinc-900 transition-all duration-300 dark:bg-white",
-            isOpen && "opacity-0",
+            isOpen && "opacity-0"
           )}
         />
         <span
           className={cn(
             "h-0.5 w-6 origin-center rounded-full bg-zinc-900 transition-all duration-300 dark:bg-white",
-            isOpen && "-translate-y-2 -rotate-45",
+            isOpen && "-translate-y-2 -rotate-45"
           )}
         />
       </button>
@@ -206,7 +206,7 @@ export function MobileMenu() {
       {typeof document !== "undefined" &&
         createPortal(
           <div data-open={isOpen ? "true" : "false"}>{menuContent}</div>,
-          document.body,
+          document.body
         )}
     </>
   );

@@ -21,7 +21,7 @@ export function SiteHeader({ className }: { className?: string }) {
     <header
       className={cn(
         "sticky top-0 z-50 border-b border-zinc-200/70 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/50 dark:border-white/10 dark:bg-zinc-950/60",
-        className,
+        className
       )}
     >
       <Container className="flex h-16 items-center justify-between gap-4">
