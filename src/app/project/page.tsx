@@ -18,7 +18,7 @@ type PackageJson = {
 
 function pickDeps(
   p: PackageJson,
-  names: string[],
+  names: string[]
 ): Array<{
   name: string;
   version: string;
@@ -32,8 +32,11 @@ function pickDeps(
   for (const name of names) {
     const dep = p.dependencies?.[name];
     const dev = p.devDependencies?.[name];
-    if (dep) out.push({ name, version: dep, type: "dependency" });
-    else if (dev) out.push({ name, version: dev, type: "devDependency" });
+    if (dep) {
+      out.push({ name, version: dep, type: "dependency" });
+    } else if (dev) {
+      out.push({ name, version: dev, type: "devDependency" });
+    }
   }
   return out;
 }
@@ -58,10 +61,10 @@ export default function ProjectDetailsPage() {
     <div className="bg-white dark:bg-zinc-950">
       <Container className="py-16 sm:py-20">
         <div className="mx-auto max-w-3xl">
-          <h1 className="text-balance text-3xl font-semibold tracking-tight text-zinc-950 dark:text-white sm:text-4xl">
+          <h1 className="text-3xl font-semibold tracking-tight text-balance text-zinc-950 sm:text-4xl dark:text-white">
             Project Details
           </h1>
-          <p className="mt-4 text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-300">
+          <p className="mt-4 text-base leading-7 text-pretty text-zinc-600 dark:text-zinc-300">
             This page is intentionally part of the navigation (last menu item)
             so anyone can understand the tech choices, versions, and how to
             reuse this landing page as a template.

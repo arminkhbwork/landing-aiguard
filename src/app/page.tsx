@@ -73,11 +73,11 @@ const faqs = [
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-white dark:bg-zinc-950">
       {/* Asymmetric split-screen hero */}
       <section className="relative overflow-hidden border-b border-zinc-200/70 bg-gradient-to-br from-zinc-50 via-white to-cyan-50/30 dark:border-white/10 dark:from-zinc-950 dark:via-zinc-950 dark:to-cyan-950/20">
-        <div className="absolute inset-0 bg-noise opacity-40" />
-        <div className="pointer-events-none absolute right-0 top-0 h-[600px] w-[600px] -translate-y-1/4 translate-x-1/4 rounded-full bg-gradient-to-br from-cyan-400/15 to-emerald-400/10 blur-3xl" />
+        <div className="bg-noise absolute inset-0 opacity-40" />
+        <div className="pointer-events-none absolute top-0 right-0 h-[600px] w-[600px] translate-x-1/4 -translate-y-1/4 rounded-full bg-gradient-to-br from-cyan-400/15 to-emerald-400/10 blur-3xl" />
 
         <Container className="relative py-20 sm:py-28 lg:py-32">
           <HeroGsap>
@@ -86,13 +86,13 @@ export default function Home() {
               <div data-hero="content" className="space-y-8">
                 <p
                   data-hero="badge"
-                  className="inline-flex items-center gap-2 rounded-lg border border-cyan-200/50 bg-cyan-50/50 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-700 shadow-sm dark:border-cyan-800/30 dark:bg-cyan-950/30 dark:text-cyan-300"
+                  className="inline-flex items-center gap-2 rounded-lg border border-cyan-200/50 bg-cyan-50/50 px-4 py-2 text-xs font-semibold tracking-wider text-cyan-700 uppercase shadow-sm dark:border-cyan-800/30 dark:bg-cyan-950/30 dark:text-cyan-300"
                 >
                   EU AI Act Compliance
                 </p>
                 <h1
                   data-hero="title"
-                  className="text-balance text-5xl font-bold leading-tight tracking-tight text-zinc-950 dark:text-white sm:text-6xl lg:text-7xl"
+                  className="text-5xl leading-tight font-bold tracking-tight text-balance text-zinc-950 sm:text-6xl lg:text-7xl dark:text-white"
                 >
                   Ship AI with{" "}
                   <span className="bg-gradient-to-r from-cyan-600 to-emerald-600 bg-clip-text text-transparent dark:from-cyan-400 dark:to-emerald-400">
@@ -102,7 +102,7 @@ export default function Home() {
                 </h1>
                 <p
                   data-hero="copy"
-                  className="max-w-xl text-lg leading-relaxed text-zinc-700 dark:text-zinc-300 sm:text-xl"
+                  className="max-w-xl text-lg leading-relaxed text-zinc-700 sm:text-xl dark:text-zinc-300"
                 >
                   AIGuard turns regulation into a workflow: classify risk,
                   generate evidence, and operate controls—without slowing
@@ -151,7 +151,7 @@ export default function Home() {
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/0 to-emerald-50/0 transition-colors group-hover:from-cyan-50/30 group-hover:to-emerald-50/20 dark:group-hover:from-cyan-950/20 dark:group-hover:to-emerald-950/10" />
                     <div className="relative">
-                      <p className="text-xs font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">
+                      <p className="text-xs font-semibold tracking-wider text-cyan-600 uppercase dark:text-cyan-400">
                         {s.k}
                       </p>
                       <p className="mt-2 text-sm font-medium text-zinc-900 dark:text-white">
@@ -167,13 +167,13 @@ export default function Home() {
       </section>
 
       {/* Numbered timeline steps */}
-      <section id="how" className="bg-white py-20 dark:bg-zinc-950 sm:py-24">
+      <section id="how" className="bg-white py-20 sm:py-24 dark:bg-zinc-950">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-300">
+            <p className="text-xs font-semibold tracking-widest text-cyan-600 uppercase dark:text-cyan-300">
               How it works
             </p>
-            <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-zinc-950 dark:text-white sm:text-5xl">
+            <h2 className="mt-4 text-4xl font-bold tracking-tight text-balance text-zinc-950 sm:text-5xl dark:text-white">
               Three steps from policy to production.
             </h2>
             <p className="mt-6 text-lg leading-7 text-zinc-600 dark:text-zinc-300">
@@ -186,7 +186,7 @@ export default function Home() {
             {steps.map((s, idx) => (
               <div
                 key={s.title}
-                className="relative flex flex-col gap-6 rounded-2xl border-l-4 border-cyan-500 bg-zinc-50/50 p-8 shadow-sm transition-all hover:shadow-md dark:border-cyan-400 dark:bg-white/5 sm:flex-row sm:items-start sm:gap-8"
+                className="relative flex flex-col gap-6 rounded-2xl border-l-4 border-cyan-500 bg-zinc-50/50 p-8 shadow-sm transition-all hover:shadow-md sm:flex-row sm:items-start sm:gap-8 dark:border-cyan-400 dark:bg-white/5"
               >
                 <div className="flex-shrink-0">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-emerald-500 text-lg font-bold text-white shadow-sm">
@@ -210,14 +210,14 @@ export default function Home() {
       {/* Alternating left/right team sections */}
       <section
         id="teams"
-        className="bg-zinc-50 py-20 dark:bg-zinc-950 sm:py-24"
+        className="bg-zinc-50 py-20 sm:py-24 dark:bg-zinc-950"
       >
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-300">
+            <p className="text-xs font-semibold tracking-widest text-cyan-600 uppercase dark:text-cyan-300">
               For teams
             </p>
-            <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-zinc-950 dark:text-white sm:text-5xl">
+            <h2 className="mt-4 text-4xl font-bold tracking-tight text-balance text-zinc-950 sm:text-5xl dark:text-white">
               Aligned across legal, product, and engineering.
             </h2>
           </div>
@@ -226,7 +226,7 @@ export default function Home() {
             {teams.map((t, idx) => (
               <div
                 key={t.title}
-                className={`flex flex-col gap-8 rounded-2xl border border-zinc-200/70 bg-white p-8 shadow-sm transition-all hover:shadow-md dark:border-white/10 dark:bg-white/5 sm:flex-row sm:items-center sm:gap-12 ${
+                className={`flex flex-col gap-8 rounded-2xl border border-zinc-200/70 bg-white p-8 shadow-sm transition-all hover:shadow-md sm:flex-row sm:items-center sm:gap-12 dark:border-white/10 dark:bg-white/5 ${
                   idx % 2 === 1 ? "sm:flex-row-reverse" : ""
                 }`}
               >
@@ -250,31 +250,31 @@ export default function Home() {
       {/* Structured table-like controls */}
       <section
         id="controls"
-        className="bg-white py-20 dark:bg-zinc-950 sm:py-24"
+        className="bg-white py-20 sm:py-24 dark:bg-zinc-950"
       >
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-300">
+            <p className="text-xs font-semibold tracking-widest text-cyan-600 uppercase dark:text-cyan-300">
               Controls
             </p>
-            <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-zinc-950 dark:text-white sm:text-5xl">
+            <h2 className="mt-4 text-4xl font-bold tracking-tight text-balance text-zinc-950 sm:text-5xl dark:text-white">
               Governance that fits modern shipping.
             </h2>
           </div>
 
           <div className="mx-auto mt-16 max-w-4xl">
             <div className="overflow-hidden rounded-2xl border border-zinc-200 shadow-lg dark:border-white/10">
-              <div className="grid grid-cols-1 divide-y divide-zinc-200 dark:divide-white/10 sm:grid-cols-[1fr_2fr] sm:divide-x sm:divide-y-0">
+              <div className="grid grid-cols-1 divide-y divide-zinc-200 sm:grid-cols-[1fr_2fr] sm:divide-x sm:divide-y-0 dark:divide-white/10">
                 {controls.map((c, idx) => (
                   <div
                     key={c.k}
-                    className={`grid grid-cols-1 gap-4 p-6 transition-colors hover:bg-zinc-50 dark:hover:bg-white/5 sm:grid-cols-[1fr_2fr] ${
+                    className={`grid grid-cols-1 gap-4 p-6 transition-colors hover:bg-zinc-50 sm:grid-cols-[1fr_2fr] dark:hover:bg-white/5 ${
                       idx === 0
                         ? "rounded-t-2xl sm:rounded-tl-2xl sm:rounded-tr-none"
                         : ""
                     } ${
                       idx === controls.length - 1
-                        ? "rounded-b-2xl sm:rounded-bl-2xl sm:rounded-br-none"
+                        ? "rounded-b-2xl sm:rounded-br-none sm:rounded-bl-2xl"
                         : ""
                     }`}
                   >
@@ -286,7 +286,7 @@ export default function Home() {
                         {c.k}
                       </p>
                     </div>
-                    <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-300 sm:pl-4">
+                    <p className="text-sm leading-6 text-zinc-600 sm:pl-4 dark:text-zinc-300">
                       {c.v}
                     </p>
                   </div>
@@ -298,13 +298,13 @@ export default function Home() {
       </section>
 
       {/* Two-column FAQ */}
-      <section id="faq" className="bg-zinc-50 py-20 dark:bg-zinc-950 sm:py-24">
+      <section id="faq" className="bg-zinc-50 py-20 sm:py-24 dark:bg-zinc-950">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-300">
+            <p className="text-xs font-semibold tracking-widest text-cyan-600 uppercase dark:text-cyan-300">
               FAQ
             </p>
-            <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-zinc-950 dark:text-white sm:text-5xl">
+            <h2 className="mt-4 text-4xl font-bold tracking-tight text-balance text-zinc-950 sm:text-5xl dark:text-white">
               Straight answers for high-trust buyers.
             </h2>
           </div>
@@ -332,14 +332,14 @@ export default function Home() {
       {/* Full-width banner CTA */}
       <section
         id="cta"
-        className="border-t border-zinc-200/70 bg-gradient-to-br from-cyan-50 via-white to-emerald-50/30 py-20 dark:border-white/10 dark:from-cyan-950/20 dark:via-zinc-950 dark:to-emerald-950/20 sm:py-24"
+        className="border-t border-zinc-200/70 bg-gradient-to-br from-cyan-50 via-white to-emerald-50/30 py-20 sm:py-24 dark:border-white/10 dark:from-cyan-950/20 dark:via-zinc-950 dark:to-emerald-950/20"
       >
         <Container>
           <div className="mx-auto max-w-4xl">
-            <div className="relative overflow-hidden rounded-2xl border border-cyan-200/50 bg-white/80 p-12 shadow-xl backdrop-blur dark:border-cyan-800/30 dark:bg-white/5 sm:p-16">
-              <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-gradient-to-br from-cyan-400/20 to-emerald-400/15 blur-3xl" />
+            <div className="relative overflow-hidden rounded-2xl border border-cyan-200/50 bg-white/80 p-12 shadow-xl backdrop-blur sm:p-16 dark:border-cyan-800/30 dark:bg-white/5">
+              <div className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-gradient-to-br from-cyan-400/20 to-emerald-400/15 blur-3xl" />
               <div className="relative">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-zinc-950 dark:text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl font-bold tracking-tight text-balance text-zinc-950 sm:text-4xl lg:text-5xl dark:text-white">
                   Make AI governance feel like a product workflow.
                 </h2>
                 <p className="mt-6 text-lg leading-7 text-zinc-600 dark:text-zinc-300">
